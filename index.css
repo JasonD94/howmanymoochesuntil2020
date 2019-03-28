@@ -23,7 +23,9 @@ body {
 
 .footer {
 	/* 	display:flex + align-items:center to make the footer text virtually center inside the footer
+		https://stackoverflow.com/a/6490283
 		position:fixed for fixing the footer to the bottom of the screen
+		https://stackoverflow.com/a/8824859
 		
 		todo: keep tweaking the responsive of the text/image/padding
 	*/
@@ -42,7 +44,9 @@ a {
 	text-decoration: underline;
 }
 
-/* Responsive text for the top text (h1) and the count down (span) */
+/* 	Responsive text for the top text (h1) and the count down (span)
+	https://www.w3schools.com/howto/howto_css_responsive_text.asp
+*/
 h1 {
 	font-size: 5vw;
 }
