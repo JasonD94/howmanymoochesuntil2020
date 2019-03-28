@@ -34,3 +34,11 @@ a {
 	font-weight: 600;	/* Bold + Underline for the links */
 	text-decoration: underline;
 }
+
+/* Responsive text for the top text (h1) and the count down (span) */
+h1 {
+	font-size: 5vw;
+}
+span {
+	font-size: 7vw;
+}
