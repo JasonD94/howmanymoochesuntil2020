@@ -17,9 +17,9 @@ html {
   position: relative;
   min-height: 100%;
 }
-body {
-  margin-bottom: 10vw; /* Margin bottom by footer height */
-}
+/* 	Doesn't seem like margin-bottom is needed with the footer class tweaks I made, it just
+	adds scrollbars on full screen.
+*/
 
 .footer {
 	/* 	display:flex + align-items:center to make the footer text virtually center inside the footer
@@ -48,8 +48,8 @@ a {
 	https://www.w3schools.com/howto/howto_css_responsive_text.asp
 */
 h1 {
-	font-size: 5vw;
+	font-size: 4.6vw;
 }
 span {
-	font-size: 7vw;
+	font-size: 6.6vw;
 }
