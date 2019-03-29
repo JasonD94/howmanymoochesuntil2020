@@ -27,13 +27,13 @@ html {
 		position:fixed for fixing the footer to the bottom of the screen
 		https://stackoverflow.com/a/8824859
 		
-		todo: keep tweaking the responsive of the text/image/padding
+		Not setting the height seems to fix the footer text going outside the background color.
 	*/
 	display: flex;
 	position: fixed;
 	align-items: center;
 	bottom: 0;
-	height: 8%;
+	padding: .5em;
 	width: 100%;
 	background-color: black;
 }
@@ -44,12 +44,36 @@ a {
 	text-decoration: underline;
 }
 
-/* 	Responsive text for the top text (h1) and the count down (span)
-	https://www.w3schools.com/howto/howto_css_responsive_text.asp
+/* 	
+	Responsive break points for setting a max font-size on the text.
+	https://getbootstrap.com/docs/4.1/layout/overview/
+	This answer worked: https://stackoverflow.com/a/30517633
 */
-h1 {
-	font-size: 4.6vw;
+
+/* This covers xs, sm, md, and lg screen sizes - everything from 1px to 1199.98px */
+@media (max-width: 1199.98px) {    
+    /* 	Responsive text for the top text (h1) and the count down (span)
+		https://www.w3schools.com/howto/howto_css_responsive_text.asp
+	*/
+	h1 {
+		font-size: 5.3vw;
+	}
+	span {
+		font-size: 5.0vw;
+	}
+	
+	/* Adjust the size of the footer background via padding */
+	.footer {
+		padding: 1em;
+	}
 }
-span {
-	font-size: 6.6vw;
+
+/* This will set a "max" font size, so we don't make the font MASSIVE on 1080P or higher desktop screen. */
+@media (min-width: 1200px) {
+	h1 {
+		font-size: 4.3em;
+	}
+	span {
+		font-size: 4em;
+	}
 }

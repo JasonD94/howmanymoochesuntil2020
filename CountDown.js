@@ -16,7 +16,9 @@ function countDownFromTime(countDown, id) {
 	var timeTo = countDown - new Date();	// Time to countDown date in milliseconds
 	
 	// Displaying only Mooches in this version of the Count Down
-	var floatMooches = Number( (timeTo / (1000*60*60*24)) * 10 ).toFixed(4);
+	// Note: divide, don't multiple. One Mooch = 10 days, so take the days calc
+	// and divide to convert to Mooches.
+	var floatMooches = Number( (timeTo / (1000*60*60*24)) / 10 ).toFixed(6);
 
 	// Mooches are defined as a unit of 10, named for former 
 	// White House Communications Director Anthony Scaramucci‘s famously short tenure
